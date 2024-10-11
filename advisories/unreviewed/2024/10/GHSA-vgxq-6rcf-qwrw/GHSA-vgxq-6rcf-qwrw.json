@@ -1,17 +1,42 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-vgxq-6rcf-qwrw",
-  "modified": "2024-10-11T18:32:49Z",
+  "modified": "2024-10-11T18:32:56Z",
   "published": "2024-10-11T18:32:49Z",
   "aliases": [
     "CVE-2024-42640"
   ],
-  "details": "angular-base64-upload prior to v0.1.21 is vulnerable to unauthenticated remote code execution via demo/server.php. Exploiting this vulnerability allows an attacker to upload arbitrary content to the server, which can subsequently be accessed through demo/uploads. This leads to the execution of previously uploaded content and enables the attacker to achieve code execution on the server. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+  "summary": " Unauthenticated RCE via Angular-Base64-Upload",
+  "details": "angular-base64-upload versions prior to v0.1.21 are vulnerable to unauthenticated remote code execution via the `angular-base64-upload/demo/server.php` endpoint. Exploitation of this vulnerability involves uploading arbitrary file content to the server, which can subsequently accessed through the `angular-base64-upload/demo/uploads` endpoint. This leads to the execution of previously uploaded content which enables the attacker to achieve code execution on the server. ",
   "severity": [
-
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+    }
   ],
   "affected": [
-
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "angular-base64-upload"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": ">= v0.1.21 "
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 0.1.21"
+      }
+    }
   ],
   "references": [
     {
@@ -19,8 +44,12 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-42640"
     },
     {
-      "type": "WEB",
+      "type": "PACKAGE",
       "url": "https://github.com/adonespitogo/angular-base64-upload"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rvizx/CVE-2024-42640"
     },
     {
       "type": "WEB",
@@ -31,7 +60,7 @@
     "cwe_ids": [
 
     ],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2024-10-11T16:15:08Z"
