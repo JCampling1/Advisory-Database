@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hxjp-q6c3-38fx",
-  "modified": "2023-02-17T21:32:15Z",
+  "modified": "2023-02-17T21:32:18Z",
   "published": "2023-02-10T09:30:23Z",
   "aliases": [
     "CVE-2023-22832"
@@ -18,7 +18,26 @@
     {
       "package": {
         "ecosystem": "Maven",
-        "name": "org.apache.nifi:nifi"
+        "name": "org.apache.nifi:nifi-ccda-processors"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.2.0"
+            },
+            {
+              "fixed": "1.20.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.nifi:nifi-ccda-nar"
       },
       "ranges": [
         {
