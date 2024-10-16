@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h2p3-h48h-9jj7",
-  "modified": "2024-04-22T23:18:39Z",
+  "modified": "2024-04-22T23:18:40Z",
   "published": "2022-05-13T01:41:00Z",
   "aliases": [
     "CVE-2017-1000220"
@@ -28,11 +28,14 @@
               "introduced": "0"
             },
             {
-              "last_affected": "1.1.4"
+              "fixed": ">= 1.1.5"
             }
           ]
         }
-      ]
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 1.1.4"
+      }
     }
   ],
   "references": [
