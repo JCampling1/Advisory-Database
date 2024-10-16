@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-ph5p-wvqc-xxj8",
-  "modified": "2024-06-29T06:31:39Z",
+  "modified": "2024-08-21T15:31:57Z",
   "published": "2024-06-29T06:31:39Z",
   "aliases": [
     "CVE-2024-35116"
   ],
+  "summary": "IBM MQ Appliance is vulnerable to a denial of service attack (CVE-2024-35116)",
   "details": "IBM MQ 9.0 LTS, 9.1 LTS, 9.2 LTS, 9.3 LTS, and 9.3 CD is vulnerable to a denial of service attack caused by an error applying configuration changes.  IBM X-Force ID:  290335.",
   "severity": [
     {
@@ -14,7 +15,94 @@
     }
   ],
   "affected": [
-
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "com.ibm:com.ibm.mq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": ">= 9.0.0.26"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 9.0.0.26"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "com.ibm:com.ibm.mq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": ">= 9.1.0.22"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 9.1.0.22"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "com.ibm:com.ibm.mq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": ">= 9.2.0.26"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 9.2.0.26"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "com.ibm:com.ibm.mq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": ">= 9.3.0.20  "
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 9.3.0.20"
+      }
+    }
   ],
   "references": [
     {
