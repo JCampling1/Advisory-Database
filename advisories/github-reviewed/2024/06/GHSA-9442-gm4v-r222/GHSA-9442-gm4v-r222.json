@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9442-gm4v-r222",
-  "modified": "2024-09-09T18:30:28Z",
+  "modified": "2024-09-09T18:31:30Z",
   "published": "2024-06-20T15:31:19Z",
   "aliases": [
     "CVE-2024-6162"
@@ -9,10 +9,6 @@
   "summary": "Undertow's url-encoded request path information can be broken on ajp-listener",
   "details": "A vulnerability was found in Undertow, where URL-encoded request paths can be mishandled during concurrent requests on the AJP listener. This issue arises because the same buffer is used to decode the paths for multiple requests simultaneously, leading to incorrect path information being processed. As a result, the server may attempt to access the wrong path, causing errors such as \"404 Not Found\" or other application failures. This flaw can potentially lead to a denial of service, as legitimate resources become inaccessible due to the path mix-up.",
   "severity": [
-    {
-      "type": "CVSS_V3",
-      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
-    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
@@ -33,6 +29,25 @@
             },
             {
               "fixed": "2.3.14.Final"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.undertow:undertow-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.2.33.Final"
             }
           ]
         }
@@ -71,6 +86,10 @@
     {
       "type": "WEB",
       "url": "https://issues.redhat.com/browse/JBEAP-26268"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.redhat.com/browse/UNDERTOW-2334"
     }
   ],
   "database_specific": {
