@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-255w-87rh-rg44",
-  "modified": "2024-10-03T18:25:40Z",
+  "modified": "2024-10-03T18:25:41Z",
   "published": "2024-10-03T18:25:40Z",
   "aliases": [
     "CVE-2024-47618"
@@ -9,10 +9,6 @@
   "summary": "Cross-site Scripting via uploaded SVG",
   "details": "In Sulu v2.0.0 through v2.6.4 are vulnerable against XSS whereas a low privileged user with an access to the “Media” section can upload an SVG file with a malicious payload. Once uploaded and accessed, the malicious javascript will be executed on the victims’ (other users including admins) browsers.",
   "severity": [
-    {
-      "type": "CVSS_V3",
-      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
-    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
@@ -32,7 +28,7 @@
               "introduced": "2.0.0-RC1"
             },
             {
-              "fixed": "2.6.5"
+              "fixed": "2.6.5,2.5.21"
             }
           ]
         }
