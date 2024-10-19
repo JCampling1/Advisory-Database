@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-43q4-pf55-3xhc",
-  "modified": "2023-04-03T18:32:06Z",
+  "modified": "2023-04-11T05:01:15Z",
   "published": "2023-03-23T21:30:19Z",
   "aliases": [
     "CVE-2023-0056"
   ],
+  "summary": "Uncontrolled Resource Consumption in HAProxy",
   "details": "An uncontrolled resource consumption vulnerability was discovered in HAProxy which could crash the service. This issue could allow an authenticated remote attacker to run a specially crafted malicious server in an OpenShift cluster. The biggest impact is to availability.",
   "severity": [
     {
@@ -14,7 +15,25 @@
     }
   ],
   "affected": [
-
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": ""
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.8.0"
+            }
+          ]
+        }
+      ]
+    }
   ],
   "references": [
     {
@@ -24,6 +43,10 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/security/cve/CVE-2023-0056"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/haproxy/haproxy"
     }
   ],
   "database_specific": {
