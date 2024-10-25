@@ -1,17 +1,33 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-w9q6-vv8m-4f39",
-  "modified": "2022-01-04T00:01:26Z",
+  "modified": "2023-02-01T05:06:57Z",
   "published": "2021-12-21T00:00:37Z",
   "aliases": [
     "CVE-2021-36887"
   ],
+  "summary": "Cross-Site Request Forgery (CSRF) vulnerability leading to Cross-Site Scripting (XSS) discovered in tarteaucitron.js – Cookies legislation & GDPR WordPress plugin",
   "details": "Cross-Site Request Forgery (CSRF) vulnerability leading to Cross-Site Scripting (XSS) discovered in tarteaucitron.js – Cookies legislation & GDPR WordPress plugin (versions <= 1.5.4), vulnerable parameters \"tarteaucitronEmail\" and \"tarteaucitronPass\".",
   "severity": [
 
   ],
   "affected": [
-
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": ""
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
   ],
   "references": [
     {
@@ -21,6 +37,10 @@
     {
       "type": "WEB",
       "url": "https://patchstack.com/database/vulnerability/tarteaucitronjs/wordpress-tarteaucitron-js-cookies-legislation-gdpr-plugin-1-5-4-cross-site-request-forgery-csrf-vulnerability-leading-to-cross-site-scripting-xss"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/tarteaucitronjs"
     },
     {
       "type": "WEB",
