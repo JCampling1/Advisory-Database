@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mh5c-679w-hh4r",
-  "modified": "2020-08-31T18:51:01Z",
+  "modified": "2023-01-09T05:04:00Z",
   "published": "2020-09-03T21:12:01Z",
   "aliases": [
 
@@ -33,10 +33,7 @@
     }
   ],
   "references": [
-    {
-      "type": "WEB",
-      "url": "https://www.npmjs.com/advisories/1203"
-    }
+
   ],
   "database_specific": {
     "cwe_ids": [
