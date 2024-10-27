@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4vr9-33fv-mg6r",
-  "modified": "2022-07-20T00:00:19Z",
+  "modified": "2023-01-27T05:05:08Z",
   "published": "2022-07-13T00:00:40Z",
   "aliases": [
     "CVE-2022-33155"
   ],
+  "summary": "XSS vulnerability",
   "details": "The ameos_tarteaucitron (aka AMEOS - TarteAuCitron GDPR cookie banner and tracking management / French RGPD compatible) extension before 1.2.23 for TYPO3 allows XSS.",
   "severity": [
     {
@@ -14,7 +15,28 @@
     }
   ],
   "affected": [
-
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "ameos/ameos_tarteaucitron"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.2.23"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 1.2.22"
+      }
+    }
   ],
   "references": [
     {
