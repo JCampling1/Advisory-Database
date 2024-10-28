@@ -10,10 +10,6 @@
   "details": "Affected by CVE-2021-3538",
   "severity": [
     {
-      "type": "CVSS_V3",
-      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
-    },
-    {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
     }
