@@ -1,17 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q34m-jh98-gwm2",
-  "modified": "2024-10-25T21:35:40Z",
+  "modified": "2024-10-25T21:35:41Z",
   "published": "2024-10-25T19:44:43Z",
   "aliases": [
     "CVE-2024-49767"
   ],
-  "summary": "Werkzeug possible resource exhaustion when parsing file data in forms",
-  "details": "Applications using Werkzeug to parse `multipart/form-data` requests are vulnerable to resource exhaustion. A specially crafted form body can bypass the `Request.max_form_memory_size` setting.\n\nThe `Request.max_content_length` setting, as well as resource limits provided by deployment software and platforms, are also available to limit the resources used during a request. This vulnerability does not affect those settings. All three types of limits should be considered and set appropriately when deploying an application.",
+  "summary": "Consider CVE-2023-45046, affecting applications",
+  "details": "# CVE-2023-45046\n\nApplications using Werkzeug to parse `multipart/form-data` requests are vulnerable to resource exhaustion. A specially crafted form body can bypass the `Request.max_form_memory_size` setting.\n\nThe `Request.max_content_length` setting, as well as resource limits provided by deployment software and platforms, are also available to limit the resources used during a request. This vulnerability does not affect those settings. All three types of limits should be considered and set appropriately when deploying an application.\n\n# Affected Applications `BlackMarlinExec` / Master\n\nFor a relevant ongoing CVE, consider adding CVE-2024-49767, which directly impacts Werkzeug when parsing multipart/form-data requests, leading to potential resource exhaustion. This vulnerability bypasses the Request.max_form_memory_size setting, making it essential to use other safeguards, like Request.max_content_length and deployment-based resource limits, to mitigate risks.\n\nIn addition, consider CVE-2023-45046, affecting applications handling file uploads and form data, which could lead to similar issues with improperly handled memory limits. Integrating these CVEs can highlight the importance of multi-layered resource limits in your project documentation for [BlackMarlinExec](https://github.com/byt3n33dl3/BlackMarlinExec)\n\nThese vulnerabilities highlight the importance of resource limit configurations across various frameworks and parsing libraries. Adding these to your case will provide a strong foundation on the significance of configuring memory and size limits in web applications.",
   "severity": [
     {
       "type": "CVSS_V4",
-      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
     }
   ],
   "affected": [
@@ -40,7 +40,7 @@
     {
       "package": {
         "ecosystem": "PyPI",
-        "name": "quart"
+        "name": "BlackMarlinExec"
       },
       "ranges": [
         {
